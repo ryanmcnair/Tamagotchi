@@ -1,7 +1,7 @@
 {
-  "name": "webpack-intro",
+  "name": "Tamagotchi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creating online application modeled after the 90s toy Tamagotchi",
   "main": "src/javascripts/main.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
