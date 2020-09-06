@@ -3,11 +3,11 @@ const healthArray = [
     id: 'eat',
     title: 'EAT',
     imageURL: '../Squirrel.gif',
-    health: 100,
+    health: 1,
     buttonOne: 'Health Food',
     buttonTwo: 'Unhealthy Food',
     pointsOne: 10,
-    pointsTwo: -3
+    pointsTwo: 3
   },
   {
     id: 'play',
@@ -17,7 +17,7 @@ const healthArray = [
     buttonOne: 'Super Fun',
     buttonTwo: 'Slightly Fun',
     pointsOne: 50,
-    pointsTwo: 2
+    pointsTwo: -2
   },
   {
     id: 'fight',
@@ -27,7 +27,7 @@ const healthArray = [
     buttonOne: 'Run Away',
     buttonTwo: 'Violence',
     pointsOne: 1,
-    pointsTwo: -10
+    pointsTwo: 10
   },
   {
     id: 'sleep',
@@ -37,7 +37,7 @@ const healthArray = [
     buttonOne: 'Nap',
     buttonTwo: 'Deep Slumber',
     pointsOne: 50,
-    pointsTwo: 60
+    pointsTwo: -60
   },
 ];
 
