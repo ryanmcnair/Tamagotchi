@@ -1,42 +1,28 @@
 import dataJunk from '../data/data';
 
-const buttonOne = () => {
+const buttonFunctions = () => {
   dataJunk.healthArray.forEach((item) => {
-    const buttonOneHealth = item;
-    if (buttonOneHealth.health <= 100) {
-      buttonOneHealth.health += buttonOneHealth.pointsOne;
-    } else if (buttonOneHealth.health >= 100) {
-      buttonOneHealth.health = 100;
-    }
-    return buttonOneHealth.health;
-  });
-};
+    const findId = dataJunk.healthArray.indexOf(item);
+    const arrayContent = dataJunk.healthArray[findId];
 
-const buttonTwo = () => {
-  dataJunk.healthArray.forEach((item) => {
-    const buttonTwoHealth = item;
-    if (buttonTwoHealth.health <= 100) {
-      buttonTwoHealth.health -= buttonTwoHealth.pointsTwo;
-    } else if (buttonTwoHealth.health >= 0) {
-      buttonTwoHealth.health = 0;
-    }
-    return buttonTwoHealth.health;
-  });
-};
-
-const buttonClick = () => {
-  dataJunk.healthArray.forEach((item) => {
     $(`#${item.id}buttonOne`).on('click', () => {
-      $(`#total${item.id}`).html('');
-      $(`#total${item.id}`).html(`<h2>${item.health}</h2>`);
+      if (arrayContent.health < 100) {
+        arrayContent.health += arrayContent.pointsOne;
+      } else if (arrayContent.health >= 100) {
+        arrayContent.health = 100;
+      }
+      $(`#total${item.id}`).html(`${item.health}`);
     });
+
     $(`#${item.id}buttonTwo`).on('click', () => {
-      $(`#total${item.id}`).html('');
-      $(`#total${item.id}`).html(`<h2>${item.health}</h2>`);
+      if (arrayContent.health < 100) {
+        arrayContent.health -= arrayContent.pointsTwo;
+      } else if (arrayContent.health <= 0) {
+        arrayContent.health = 0;
+      }
+      $(`#total${item.id}`).html(`${item.health}`);
     });
-    buttonOne();
-    buttonTwo();
   });
 };
 
-export default { buttonClick };
+export default { buttonFunctions };

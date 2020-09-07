@@ -17,7 +17,7 @@ const healthArray = [
     buttonOne: 'Super Fun',
     buttonTwo: 'Slightly Fun',
     pointsOne: 50,
-    pointsTwo: -2
+    pointsTwo: 2
   },
   {
     id: 'fight',
