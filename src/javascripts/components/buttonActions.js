@@ -6,19 +6,19 @@ const buttonFunctions = () => {
     const arrayContent = dataJunk.healthArray[findId];
 
     $(`#${item.id}buttonOne`).on('click', () => {
-      if (arrayContent.health < 100) {
+      if (arrayContent.health + arrayContent.pointsOne > 100) {
+        arrayContent.health += (100 - arrayContent.health);
+      } else {
         arrayContent.health += arrayContent.pointsOne;
-      } else if (arrayContent.health >= 100) {
-        arrayContent.health = 100;
       }
       $(`#total${item.id}`).html(`${item.health}`);
     });
 
     $(`#${item.id}buttonTwo`).on('click', () => {
-      if (arrayContent.health < 100) {
-        arrayContent.health -= arrayContent.pointsTwo;
-      } else if (arrayContent.health <= 0) {
-        arrayContent.health = 0;
+      if (arrayContent.health + arrayContent.pointsTwo > 100) {
+        arrayContent.health += (100 - arrayContent.health);
+      } else {
+        arrayContent.health += arrayContent.pointsTwo;
       }
       $(`#total${item.id}`).html(`${item.health}`);
     });
